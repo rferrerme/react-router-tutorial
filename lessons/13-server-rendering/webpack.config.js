@@ -1,12 +1,14 @@
 var webpack = require('webpack')
 
+var root = '/sampleapp'
+
 module.exports = {
   entry: './index.js',
 
   output: {
-    path: 'public',
+    path: 'public' + root,
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: root + '/'
   },
 
   plugins: process.env.NODE_ENV === 'production' ? [

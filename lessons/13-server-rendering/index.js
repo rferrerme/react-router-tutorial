@@ -6,15 +6,16 @@ import About from './modules/About'
 import Repos from './modules/Repos'
 import Repo from './modules/Repo'
 import Home from './modules/Home'
+import { addRoot } from './modules/Root'
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path={addRoot("/")} component={App}>
       <IndexRoute component={Home}/>
-      <Route path="/repos" component={Repos}>
-        <Route path="/repos/:userName/:repoName" component={Repo}/>
+      <Route path={addRoot("/repos")} component={Repos}>
+        <Route path={addRoot("/repos/:userName/:repoName")} component={Repo}/>
       </Route>
-      <Route path="/about" component={About}/>
+      <Route path={addRoot("/about")} component={About}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

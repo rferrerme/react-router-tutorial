@@ -1,5 +1,11 @@
 # Server Rendering
 
+This forked repository contains changes that enable the deployment in a different root other than "/". That would be useful if you are e.g. composing multiple servers and you want them to have different roots. "/sampleapp" is the root used here as an example.
+
+Remember that the code here is actually the one corresponding to the result of [Lesson 12 - Navigating](/lessons/12-navigating/).
+
+--
+
 Alright, first things first. Server rendering, at its core is a simple
 concept in React.
 
